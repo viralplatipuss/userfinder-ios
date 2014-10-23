@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F270131619F9160000ABA859 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F270131519F9160000ABA859 /* main.m */; };
+		F270131919F9160000ABA859 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F270131819F9160000ABA859 /* AppDelegate.m */; };
+		F270132119F9160000ABA859 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F270132019F9160000ABA859 /* Images.xcassets */; };
+		F270132419F9160000ABA859 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F270132219F9160000ABA859 /* LaunchScreen.xib */; };
+		F270133019F9160000ABA859 /* UserFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F270132F19F9160000ABA859 /* UserFinderTests.m */; };
+		F270133B19F9172B00ABA859 /* UserFinderService.m in Sources */ = {isa = PBXBuildFile; fileRef = F270133A19F9172B00ABA859 /* UserFinderService.m */; };
+		F270133D19F9174E00ABA859 /* sample_locations.xml in Resources */ = {isa = PBXBuildFile; fileRef = F270133C19F9174E00ABA859 /* sample_locations.xml */; };
+		F270134119F918CE00ABA859 /* UserFinderSampleLocationsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F270134019F918CE00ABA859 /* UserFinderSampleLocationsDataSource.m */; };
+		F270134419F91EAE00ABA859 /* UserFinderWebLocationsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F270134319F91EAE00ABA859 /* UserFinderWebLocationsDataSource.m */; };
+		F270134719F9209F00ABA859 /* UserLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F270134619F9209F00ABA859 /* UserLocation.m */; };
+		F270134D19F93E3C00ABA859 /* UserLocationsXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F270134C19F93E3C00ABA859 /* UserLocationsXMLParser.m */; };
+		F270135019F94DE600ABA859 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F270134F19F94DE600ABA859 /* MainTabBarController.m */; };
+		F270135619F94E4D00ABA859 /* ALView.m in Sources */ = {isa = PBXBuildFile; fileRef = F270135519F94E4D00ABA859 /* ALView.m */; };
+		F270135919F9513000ABA859 /* ListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F270135819F9513000ABA859 /* ListView.m */; };
+		F270135C19F9518100ABA859 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F270135B19F9518100ABA859 /* ListViewController.m */; };
+		F270135F19F9566700ABA859 /* UFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F270135E19F9566700ABA859 /* UFViewController.m */; };
+		F270136219F957CA00ABA859 /* UFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F270136119F957CA00ABA859 /* UFTabBarController.m */; };
+		F270136519F964D800ABA859 /* Services.m in Sources */ = {isa = PBXBuildFile; fileRef = F270136419F964D800ABA859 /* Services.m */; };
+		F270136819F97EB100ABA859 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F270136719F97EB100ABA859 /* MapViewController.m */; };
+		F270136B19F9807F00ABA859 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = F270136A19F9807F00ABA859 /* MapView.m */; };
+		F270136D19F980BA00ABA859 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F270136C19F980BA00ABA859 /* MapKit.framework */; };
+		F270137019F984AA00ABA859 /* UserLocationMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F270136F19F984AA00ABA859 /* UserLocationMapAnnotation.m */; };
+		F2B1230119F9BBE200493D1F /* PreferencesService.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B1230019F9BBE200493D1F /* PreferencesService.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F270132A19F9160000ABA859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F270130819F9160000ABA859 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F270130F19F9160000ABA859;
+			remoteInfo = UserFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F270131019F9160000ABA859 /* UserFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F270131419F9160000ABA859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F270131519F9160000ABA859 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F270131719F9160000ABA859 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F270131819F9160000ABA859 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F270132019F9160000ABA859 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F270132319F9160000ABA859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F270132919F9160000ABA859 /* UserFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F270132E19F9160000ABA859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F270132F19F9160000ABA859 /* UserFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserFinderTests.m; sourceTree = "<group>"; };
+		F270133919F9172B00ABA859 /* UserFinderService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFinderService.h; sourceTree = "<group>"; };
+		F270133A19F9172B00ABA859 /* UserFinderService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFinderService.m; sourceTree = "<group>"; };
+		F270133C19F9174E00ABA859 /* sample_locations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample_locations.xml; sourceTree = "<group>"; };
+		F270133E19F917A400ABA859 /* UserFinderLocationsDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserFinderLocationsDataSource.h; sourceTree = "<group>"; };
+		F270133F19F918CE00ABA859 /* UserFinderSampleLocationsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFinderSampleLocationsDataSource.h; sourceTree = "<group>"; };
+		F270134019F918CE00ABA859 /* UserFinderSampleLocationsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFinderSampleLocationsDataSource.m; sourceTree = "<group>"; };
+		F270134219F91EAE00ABA859 /* UserFinderWebLocationsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFinderWebLocationsDataSource.h; sourceTree = "<group>"; };
+		F270134319F91EAE00ABA859 /* UserFinderWebLocationsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFinderWebLocationsDataSource.m; sourceTree = "<group>"; };
+		F270134519F9209F00ABA859 /* UserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocation.h; sourceTree = "<group>"; };
+		F270134619F9209F00ABA859 /* UserLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocation.m; sourceTree = "<group>"; };
+		F270134B19F93E3C00ABA859 /* UserLocationsXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationsXMLParser.h; sourceTree = "<group>"; };
+		F270134C19F93E3C00ABA859 /* UserLocationsXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationsXMLParser.m; sourceTree = "<group>"; };
+		F270134E19F94DE600ABA859 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		F270134F19F94DE600ABA859 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		F270135419F94E4D00ABA859 /* ALView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALView.h; sourceTree = "<group>"; };
+		F270135519F94E4D00ABA859 /* ALView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALView.m; sourceTree = "<group>"; };
+		F270135719F9513000ABA859 /* ListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListView.h; sourceTree = "<group>"; };
+		F270135819F9513000ABA859 /* ListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListView.m; sourceTree = "<group>"; };
+		F270135A19F9518100ABA859 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		F270135B19F9518100ABA859 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		F270135D19F9566700ABA859 /* UFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFViewController.h; sourceTree = "<group>"; };
+		F270135E19F9566700ABA859 /* UFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFViewController.m; sourceTree = "<group>"; };
+		F270136019F957CA00ABA859 /* UFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UFTabBarController.h; sourceTree = "<group>"; };
+		F270136119F957CA00ABA859 /* UFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UFTabBarController.m; sourceTree = "<group>"; };
+		F270136319F964D800ABA859 /* Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
+		F270136419F964D800ABA859 /* Services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Services.m; sourceTree = "<group>"; };
+		F270136619F97EB100ABA859 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		F270136719F97EB100ABA859 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		F270136919F9807F00ABA859 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		F270136A19F9807F00ABA859 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		F270136C19F980BA00ABA859 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F270136E19F984AA00ABA859 /* UserLocationMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationMapAnnotation.h; sourceTree = "<group>"; };
+		F270136F19F984AA00ABA859 /* UserLocationMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationMapAnnotation.m; sourceTree = "<group>"; };
+		F2B122FF19F9BBE200493D1F /* PreferencesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesService.h; sourceTree = "<group>"; };
+		F2B1230019F9BBE200493D1F /* PreferencesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesService.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F270130D19F9160000ABA859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F270136D19F980BA00ABA859 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F270132619F9160000ABA859 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F270130719F9160000ABA859 = {
+			isa = PBXGroup;
+			children = (
+				F270136C19F980BA00ABA859 /* MapKit.framework */,
+				F270131219F9160000ABA859 /* UserFinder */,
+				F270132C19F9160000ABA859 /* UserFinderTests */,
+				F270131119F9160000ABA859 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F270131119F9160000ABA859 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F270131019F9160000ABA859 /* UserFinder.app */,
+				F270132919F9160000ABA859 /* UserFinderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F270131219F9160000ABA859 /* UserFinder */ = {
+			isa = PBXGroup;
+			children = (
+				F2B1230219F9C2AE00493D1F /* Superclasses */,
+				F2B1231419F9C38300493D1F /* AppDelegate */,
+				F2B1231319F9C37A00493D1F /* MainTabBarController */,
+				F2B1231119F9C36E00493D1F /* ListViewController */,
+				F2B1230E19F9C35300493D1F /* MapViewController */,
+				F2B1230D19F9C34200493D1F /* Services */,
+				F270131319F9160000ABA859 /* Supporting Files */,
+			);
+			path = UserFinder;
+			sourceTree = "<group>";
+		};
+		F270131319F9160000ABA859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F270132019F9160000ABA859 /* Images.xcassets */,
+				F270132219F9160000ABA859 /* LaunchScreen.xib */,
+				F270133C19F9174E00ABA859 /* sample_locations.xml */,
+				F270131419F9160000ABA859 /* Info.plist */,
+				F270131519F9160000ABA859 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F270132C19F9160000ABA859 /* UserFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				F270132F19F9160000ABA859 /* UserFinderTests.m */,
+				F270132D19F9160000ABA859 /* Supporting Files */,
+			);
+			path = UserFinderTests;
+			sourceTree = "<group>";
+		};
+		F270132D19F9160000ABA859 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F270132E19F9160000ABA859 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2B1230219F9C2AE00493D1F /* Superclasses */ = {
+			isa = PBXGroup;
+			children = (
+				F2B1230419F9C2BD00493D1F /* TabBarController */,
+				F2B1230519F9C2CA00493D1F /* ViewController */,
+				F2B1230319F9C2B500493D1F /* View */,
+			);
+			name = Superclasses;
+			sourceTree = "<group>";
+		};
+		F2B1230319F9C2B500493D1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F270135419F94E4D00ABA859 /* ALView.h */,
+				F270135519F94E4D00ABA859 /* ALView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F2B1230419F9C2BD00493D1F /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F270136019F957CA00ABA859 /* UFTabBarController.h */,
+				F270136119F957CA00ABA859 /* UFTabBarController.m */,
+			);
+			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		F2B1230519F9C2CA00493D1F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F270135D19F9566700ABA859 /* UFViewController.h */,
+				F270135E19F9566700ABA859 /* UFViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		F2B1230619F9C2E900493D1F /* UserFinderLocationsDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F270133E19F917A400ABA859 /* UserFinderLocationsDataSource.h */,
+				F2B1230719F9C2F300493D1F /* Sample */,
+				F2B1230819F9C2F900493D1F /* Web */,
+			);
+			name = UserFinderLocationsDataSource;
+			sourceTree = "<group>";
+		};
+		F2B1230719F9C2F300493D1F /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				F270133F19F918CE00ABA859 /* UserFinderSampleLocationsDataSource.h */,
+				F270134019F918CE00ABA859 /* UserFinderSampleLocationsDataSource.m */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
+		F2B1230819F9C2F900493D1F /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				F270134219F91EAE00ABA859 /* UserFinderWebLocationsDataSource.h */,
+				F270134319F91EAE00ABA859 /* UserFinderWebLocationsDataSource.m */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		F2B1230919F9C30500493D1F /* UserLocationsXMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				F270134B19F93E3C00ABA859 /* UserLocationsXMLParser.h */,
+				F270134C19F93E3C00ABA859 /* UserLocationsXMLParser.m */,
+			);
+			name = UserLocationsXMLParser;
+			sourceTree = "<group>";
+		};
+		F2B1230A19F9C31200493D1F /* UserLocation */ = {
+			isa = PBXGroup;
+			children = (
+				F270134519F9209F00ABA859 /* UserLocation.h */,
+				F270134619F9209F00ABA859 /* UserLocation.m */,
+			);
+			name = UserLocation;
+			sourceTree = "<group>";
+		};
+		F2B1230B19F9C31B00493D1F /* UserFinderService */ = {
+			isa = PBXGroup;
+			children = (
+				F270133919F9172B00ABA859 /* UserFinderService.h */,
+				F270133A19F9172B00ABA859 /* UserFinderService.m */,
+				F2B1230919F9C30500493D1F /* UserLocationsXMLParser */,
+				F2B1230619F9C2E900493D1F /* UserFinderLocationsDataSource */,
+				F2B1230A19F9C31200493D1F /* UserLocation */,
+			);
+			name = UserFinderService;
+			sourceTree = "<group>";
+		};
+		F2B1230C19F9C33900493D1F /* PreferencesService */ = {
+			isa = PBXGroup;
+			children = (
+				F2B122FF19F9BBE200493D1F /* PreferencesService.h */,
+				F2B1230019F9BBE200493D1F /* PreferencesService.m */,
+			);
+			name = PreferencesService;
+			sourceTree = "<group>";
+		};
+		F2B1230D19F9C34200493D1F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F270136319F964D800ABA859 /* Services.h */,
+				F270136419F964D800ABA859 /* Services.m */,
+				F2B1230C19F9C33900493D1F /* PreferencesService */,
+				F2B1230B19F9C31B00493D1F /* UserFinderService */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		F2B1230E19F9C35300493D1F /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F270136619F97EB100ABA859 /* MapViewController.h */,
+				F270136719F97EB100ABA859 /* MapViewController.m */,
+				F2B1230F19F9C35C00493D1F /* View */,
+				F2B1231019F9C36400493D1F /* UserLocationMapAnnotation */,
+			);
+			name = MapViewController;
+			sourceTree = "<group>";
+		};
+		F2B1230F19F9C35C00493D1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F270136919F9807F00ABA859 /* MapView.h */,
+				F270136A19F9807F00ABA859 /* MapView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F2B1231019F9C36400493D1F /* UserLocationMapAnnotation */ = {
+			isa = PBXGroup;
+			children = (
+				F270136E19F984AA00ABA859 /* UserLocationMapAnnotation.h */,
+				F270136F19F984AA00ABA859 /* UserLocationMapAnnotation.m */,
+			);
+			name = UserLocationMapAnnotation;
+			sourceTree = "<group>";
+		};
+		F2B1231119F9C36E00493D1F /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F270135A19F9518100ABA859 /* ListViewController.h */,
+				F270135B19F9518100ABA859 /* ListViewController.m */,
+				F2B1231219F9C37400493D1F /* View */,
+			);
+			name = ListViewController;
+			sourceTree = "<group>";
+		};
+		F2B1231219F9C37400493D1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F270135719F9513000ABA859 /* ListView.h */,
+				F270135819F9513000ABA859 /* ListView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F2B1231319F9C37A00493D1F /* MainTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F270134E19F94DE600ABA859 /* MainTabBarController.h */,
+				F270134F19F94DE600ABA859 /* MainTabBarController.m */,
+			);
+			name = MainTabBarController;
+			sourceTree = "<group>";
+		};
+		F2B1231419F9C38300493D1F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F270131719F9160000ABA859 /* AppDelegate.h */,
+				F270131819F9160000ABA859 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F270130F19F9160000ABA859 /* UserFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F270133319F9160000ABA859 /* Build configuration list for PBXNativeTarget "UserFinder" */;
+			buildPhases = (
+				F270130C19F9160000ABA859 /* Sources */,
+				F270130D19F9160000ABA859 /* Frameworks */,
+				F270130E19F9160000ABA859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UserFinder;
+			productName = UserFinder;
+			productReference = F270131019F9160000ABA859 /* UserFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F270132819F9160000ABA859 /* UserFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F270133619F9160000ABA859 /* Build configuration list for PBXNativeTarget "UserFinderTests" */;
+			buildPhases = (
+				F270132519F9160000ABA859 /* Sources */,
+				F270132619F9160000ABA859 /* Frameworks */,
+				F270132719F9160000ABA859 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F270132B19F9160000ABA859 /* PBXTargetDependency */,
+			);
+			name = UserFinderTests;
+			productName = UserFinderTests;
+			productReference = F270132919F9160000ABA859 /* UserFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F270130819F9160000ABA859 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Dom Chapman";
+				TargetAttributes = {
+					F270130F19F9160000ABA859 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 4R5BK7Y325;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					F270132819F9160000ABA859 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = F270130F19F9160000ABA859;
+					};
+				};
+			};
+			buildConfigurationList = F270130B19F9160000ABA859 /* Build configuration list for PBXProject "UserFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F270130719F9160000ABA859;
+			productRefGroup = F270131119F9160000ABA859 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F270130F19F9160000ABA859 /* UserFinder */,
+				F270132819F9160000ABA859 /* UserFinderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F270130E19F9160000ABA859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F270132419F9160000ABA859 /* LaunchScreen.xib in Resources */,
+				F270133D19F9174E00ABA859 /* sample_locations.xml in Resources */,
+				F270132119F9160000ABA859 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F270132719F9160000ABA859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F270130C19F9160000ABA859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F270131919F9160000ABA859 /* AppDelegate.m in Sources */,
+				F270134719F9209F00ABA859 /* UserLocation.m in Sources */,
+				F270133B19F9172B00ABA859 /* UserFinderService.m in Sources */,
+				F270135919F9513000ABA859 /* ListView.m in Sources */,
+				F270136219F957CA00ABA859 /* UFTabBarController.m in Sources */,
+				F270136519F964D800ABA859 /* Services.m in Sources */,
+				F270135019F94DE600ABA859 /* MainTabBarController.m in Sources */,
+				F270137019F984AA00ABA859 /* UserLocationMapAnnotation.m in Sources */,
+				F270134419F91EAE00ABA859 /* UserFinderWebLocationsDataSource.m in Sources */,
+				F270131619F9160000ABA859 /* main.m in Sources */,
+				F270135619F94E4D00ABA859 /* ALView.m in Sources */,
+				F270135C19F9518100ABA859 /* ListViewController.m in Sources */,
+				F270134119F918CE00ABA859 /* UserFinderSampleLocationsDataSource.m in Sources */,
+				F270136819F97EB100ABA859 /* MapViewController.m in Sources */,
+				F2B1230119F9BBE200493D1F /* PreferencesService.m in Sources */,
+				F270136B19F9807F00ABA859 /* MapView.m in Sources */,
+				F270134D19F93E3C00ABA859 /* UserLocationsXMLParser.m in Sources */,
+				F270135F19F9566700ABA859 /* UFViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F270132519F9160000ABA859 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F270133019F9160000ABA859 /* UserFinderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F270132B19F9160000ABA859 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F270130F19F9160000ABA859 /* UserFinder */;
+			targetProxy = F270132A19F9160000ABA859 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F270132219F9160000ABA859 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F270132319F9160000ABA859 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F270133119F9160000ABA859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dom Chapman (Q99XHCA9E3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F270133219F9160000ABA859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dom Chapman (Q99XHCA9E3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F270133419F9160000ABA859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = UserFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		F270133519F9160000ABA859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = UserFinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		F270133719F9160000ABA859 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UserFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UserFinder.app/UserFinder";
+			};
+			name = Debug;
+		};
+		F270133819F9160000ABA859 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UserFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UserFinder.app/UserFinder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F270130B19F9160000ABA859 /* Build configuration list for PBXProject "UserFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F270133119F9160000ABA859 /* Debug */,
+				F270133219F9160000ABA859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F270133319F9160000ABA859 /* Build configuration list for PBXNativeTarget "UserFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F270133419F9160000ABA859 /* Debug */,
+				F270133519F9160000ABA859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F270133619F9160000ABA859 /* Build configuration list for PBXNativeTarget "UserFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F270133719F9160000ABA859 /* Debug */,
+				F270133819F9160000ABA859 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F270130819F9160000ABA859 /* Project object */;
+}

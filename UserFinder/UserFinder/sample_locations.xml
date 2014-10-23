@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locations>
+    <last_seen_at>
+        <address>15 W 42nd St, New York, NY 10036</address>
+        <lat>40.7539552</lat>
+        <lon>-73.9819276</lon>
+        <timestamp>1399453200</timestamp>
+    </last_seen_at>
+    <last_seen_at>
+        <address>229 E14TH Street, New York, NY</address>
+        <lat>40.7330090</lat>
+        <lon>-73.9857980</lon>
+        <timestamp>1399539600</timestamp>
+    </last_seen_at>
+    <last_seen_at>
+        <address>107 Sullivan St, New York, NY 10012</address>
+        <lat>40.7257385</lat>
+        <lon>-74.0026398</lon>
+        <timestamp>1399626000</timestamp>
+    </last_seen_at>
+    <last_seen_at>
+        <address>36 West 36TH street, New York, NY</address>
+        <lat>40.7501907</lat>
+        <lon>-73.9853363</lon>
+        <timestamp>1399712400</timestamp>
+    </last_seen_at>
+    <last_seen_at>
+        <address>17 W 125th St, New York, NY 10027</address>
+        <lat>40.8071136</lat>
+        <lon>-73.9431686</lon>
+        <timestamp>1399798800</timestamp>
+    </last_seen_at>
+    <last_seen_at>
+        <address>15 W 82nd St, New York, NY 10024</address>
+        <lat>40.7833061</lat>
+        <lon>-73.9720306</lon>
+        <timestamp>1399885200</timestamp>
+    </last_seen_at>
+    <last_seen_at>
+        <address>108 10th St, Brooklyn, NY 11215</address>
+  	<lat>40.6720197</lat>
+  	<lon>-73.9941283</lon>
+   	<timestamp> 1399366800 </timestamp>
+    </last_seen_at>
+</locations>
