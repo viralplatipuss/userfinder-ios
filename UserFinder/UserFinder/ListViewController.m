@@ -10,6 +10,12 @@
 #import "ListView.h"
 #import "UserLocation.h"
 
+
+//KVO Context
+static int kIsRefreshingKVOContext;
+static int kUserLocationsKVOContext;
+
+
 @interface ListViewController() <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong, readonly) ListView *listView;
@@ -33,20 +39,41 @@
 {
 	self.listView.table.dataSource = self;
 	self.listView.table.delegate = self;
-	
-	[self addObserver:self forKeyPath:[self userLocationsKeyPath] options:NSKeyValueObservingOptionNew context:NULL];
-	[self addObserver:self forKeyPath:[self isRefreshingKeyPath] options:NSKeyValueObservingOptionNew context:NULL];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	[self startKVO];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+	[self stopKVO];
 }
 
 
 
 #pragma mark - KVO
 
+-(void)startKVO
+{
+	[self addObserver:self forKeyPath:[self userLocationsKeyPath] options:NSKeyValueObservingOptionNew context:&kUserLocationsKVOContext];
+	[self addObserver:self forKeyPath:[self isRefreshingKeyPath] options:NSKeyValueObservingOptionNew context:&kIsRefreshingKVOContext];}
+
+-(void)stopKVO
+{
+	[self removeObserver:self forKeyPath:[self userLocationsKeyPath] context:&kUserLocationsKVOContext];
+	[self removeObserver:self forKeyPath:[self isRefreshingKeyPath] context:&kIsRefreshingKVOContext];
+}
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if ([keyPath isEqualToString:[self userLocationsKeyPath]] || [keyPath isEqualToString:[self isRefreshingKeyPath]]) {
+	if (context == &kIsRefreshingKVOContext || context == &kUserLocationsKVOContext) {
 		[self performSelectorOnMainThread:@selector(updateTable) withObject:nil waitUntilDone:NO];
-		return;
+	}else {
+		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 	}
 }
 

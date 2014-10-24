@@ -10,10 +10,17 @@
 #import "ListViewController.h"
 #import "MapViewController.h"
 
+
+//Enums
 typedef NS_ENUM(NSUInteger, ViewPage) {
 	ViewPageList,
 	ViewPageMap
 };
+
+
+//KVO Context
+static int kIsRefreshingKVOContext;
+
 
 @interface MainTabBarController() <ListViewControllerDelegate>
 
@@ -47,18 +54,51 @@ typedef NS_ENUM(NSUInteger, ViewPage) {
 	self.viewControllers = @[self.listViewController, self.mapViewController];
 	
 	[self showDefaultPage];
-	
-	//KVO
-	[self addObserver:self forKeyPath:[self isRefreshingKeyPath] options:NSKeyValueObservingOptionNew context:NULL];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	[self startKVO];
 	
 	//First data call
 	[self refresh];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+	[self stopKVO];
 }
 
 -(void)setupNavBar
 {
 	self.navigationItem.titleView = self.segmentedControl;
 	self.navigationItem.rightBarButtonItem = self.refreshButton;
+}
+
+
+
+#pragma mark - KVO
+
+-(void)startKVO
+{
+	[self addObserver:self forKeyPath:[self isRefreshingKeyPath] options:NSKeyValueObservingOptionNew context:&kIsRefreshingKVOContext];
+}
+
+-(void)stopKVO
+{
+	[self removeObserver:self forKeyPath:[self isRefreshingKeyPath] context:&kIsRefreshingKVOContext];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+	if (context == &kIsRefreshingKVOContext) {
+		self.refreshButton.enabled = !self.services.userFinderService.isRefreshing;
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:self.services.userFinderService.isRefreshing];
+	}else {
+		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+	}
 }
 
 
@@ -117,16 +157,6 @@ typedef NS_ENUM(NSUInteger, ViewPage) {
 {
 	[self showViewPage:ViewPageMap];
 	[self.mapViewController zoomToUserLocationWithIndex:userLocationIndex animated:NO];
-}
-
-
-
-#pragma mark - KVO
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-	self.refreshButton.enabled = !self.services.userFinderService.isRefreshing;
-	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:self.services.userFinderService.isRefreshing];
 }
 
 

@@ -11,6 +11,11 @@
 #import "UserLocation.h"
 #import "UserLocationMapAnnotation.h"
 
+
+//KVO Context
+static int kUserLocationsKVOContext;
+
+
 @interface MapViewController()
 
 @property (nonatomic, strong, readonly) MapView *mapView;
@@ -32,9 +37,16 @@
 	self.view = self.mapView;
 }
 
--(void)servicesDidLoad
+-(void)viewWillAppear:(BOOL)animated
 {
-	[self addObserver:self forKeyPath:[self userLocationsKeyPath] options:NSKeyValueObservingOptionNew context:NULL];
+	[super viewWillAppear:animated];
+	[self startKVO];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+	[self stopKVO];
 }
 
 
@@ -53,13 +65,22 @@
 
 #pragma mark - KVO
 
+-(void)startKVO
+{
+	[self addObserver:self forKeyPath:[self userLocationsKeyPath] options:NSKeyValueObservingOptionNew context:&kUserLocationsKVOContext];
+}
+
+-(void)stopKVO
+{
+	[self removeObserver:self forKeyPath:[self userLocationsKeyPath] context:&kUserLocationsKVOContext];
+}
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if ([keyPath isEqualToString:[self userLocationsKeyPath]]) {
-		
+	if (context == &kUserLocationsKVOContext) {
 		[self refreshMap];
-		
-		return;
+	}else {
+		[super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 	}
 }
 
