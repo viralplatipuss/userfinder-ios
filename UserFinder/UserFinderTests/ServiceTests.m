@@ -66,36 +66,40 @@
 	
 	XCTAssertFalse(service.isRefreshing, @"UserFinderService thinks it's refreshing before refresh has been called.");
 	
-		NSLog(@"1");
+	NSLog(@"1");
 	
-	dispatch_group_t serviceGroup = dispatch_group_create();
+	__block BOOL waitingForBlock = YES;
 	
-	 dispatch_group_enter(serviceGroup);
-	
-		NSLog(@"2");
+	NSLog(@"2");
 	
 	[service refreshWithCompletion:^(BOOL success) {
 		
-			NSLog(@"3");
+		NSLog(@"3");
 		
-		XCTAssertTrue(!success, @"UserFinderService fails to refresh successfully with sample data.");
+		 waitingForBlock = NO;
+		
+		XCTAssertTrue(success, @"UserFinderService fails to refresh successfully with sample data.");
 		XCTAssertFalse(service.isRefreshing, @"UserFinderService still thinks it's refreshing after calling completion block.");
 
 		XCTAssertNotNil(service.userLocations,@"UserFinderService has no locations after refresh with sample data.");
 		
-		dispatch_group_leave(serviceGroup);
 		
 			NSLog(@"4");
 		
 	}];
 	
-	dispatch_group_wait(serviceGroup,DISPATCH_TIME_FOREVER);
 	
 		NSLog(@"5");
-		
+	
 		XCTAssertTrue(service.isRefreshing, @"UserFinderService does not correctly set isRefreshing after calling refresh.");
 	
+	
+	while(waitingForBlock) {
+		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
+														 beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+	}
 
+	
 }
 
 
