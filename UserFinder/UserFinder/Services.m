@@ -11,7 +11,7 @@
 #import "UserFinderWebLocationsDataSource.h"
 
 //Switch between sample/web data for debugging.
-static const BOOL kUseSampleData = NO;
+static const BOOL kUseSampleData = YES;
 
 
 @interface Services()
