@@ -22,6 +22,8 @@ static int kUserLocationsKVOContext;
 
 @property (nonatomic, strong, readwrite) NSArray *annotations;
 
+@property (nonatomic, assign, readwrite) BOOL hasAppearedBefore;
+
 @end
 
 @implementation MapViewController
@@ -41,6 +43,11 @@ static int kUserLocationsKVOContext;
 {
 	[super viewWillAppear:animated];
 	[self startKVO];
+	
+	if (!self.hasAppearedBefore) {
+		[self refreshMap];
+	}
+	
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -94,6 +101,11 @@ static int kUserLocationsKVOContext;
 	[self updateAnnotations];
 	[self.mapView.map addAnnotations:self.annotations];
 	
+	[self zoomToFitAllAnnotations];
+}
+
+-(void)zoomToFitAllAnnotations
+{
 	[self.mapView.map showAnnotations:self.annotations animated:YES];
 }
 
