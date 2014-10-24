@@ -133,9 +133,7 @@
 			children = (
 				F2B1230219F9C2AE00493D1F /* Superclasses */,
 				F2B1231419F9C38300493D1F /* AppDelegate */,
-				F2B1231319F9C37A00493D1F /* MainTabBarController */,
-				F2B1231119F9C36E00493D1F /* ListViewController */,
-				F2B1230E19F9C35300493D1F /* MapViewController */,
+				F2B1231519FA867E00493D1F /* Core */,
 				F2B1230D19F9C34200493D1F /* Services */,
 				F270131319F9160000ABA859 /* Supporting Files */,
 			);
@@ -350,6 +348,16 @@
 				F270131819F9160000ABA859 /* AppDelegate.m */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F2B1231519FA867E00493D1F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F2B1231319F9C37A00493D1F /* MainTabBarController */,
+				F2B1231119F9C36E00493D1F /* ListViewController */,
+				F2B1230E19F9C35300493D1F /* MapViewController */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -12,8 +12,6 @@
 
 @interface Services : NSObject
 
--(instancetype)initWithUserFinderService:(UserFinderService *)userFinderService preferencesService:(PreferencesService *)preferencesService;
-
 @property (nonatomic, strong, readonly) UserFinderService *userFinderService;
 
 @property (nonatomic, strong, readonly) PreferencesService *preferencesService;

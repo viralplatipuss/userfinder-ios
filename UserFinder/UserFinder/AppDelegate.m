@@ -14,30 +14,7 @@
 #import "MainTabBarController.h"
 
 
-static const BOOL kUseSampleData = NO;
-
-
-@interface AppDelegate ()
-
-@end
-
 @implementation AppDelegate
-
--(id <UserFinderLocationsDataSource>)locationDataSource
-{
-	if (kUseSampleData) {
-		return [UserFinderSampleLocationsDataSource new];
-	}else {
-		return [UserFinderWebLocationsDataSource new];
-	}
-}
-
--(Services *)services
-{
-	UserFinderService *userFinderService = [[UserFinderService alloc] initWithUserFinderLocationsDataSource:[self locationDataSource]];
-	PreferencesService *preferencesService = [PreferencesService new];
-	return [[Services alloc] initWithUserFinderService:userFinderService preferencesService:preferencesService];
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
@@ -45,7 +22,7 @@ static const BOOL kUseSampleData = NO;
 	self.window.backgroundColor = [UIColor whiteColor];
 	[self.window makeKeyAndVisible];
 	
-	MainTabBarController *viewController = [[MainTabBarController alloc] initWithServices:[self services]];
+	MainTabBarController *viewController = [[MainTabBarController alloc] initWithServices:[Services new]];
 	
 	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
 	
