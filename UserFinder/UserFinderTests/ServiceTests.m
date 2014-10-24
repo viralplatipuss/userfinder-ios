@@ -64,41 +64,30 @@
 	UserFinderSampleLocationsDataSource *dataSource = [UserFinderSampleLocationsDataSource new];
 	UserFinderService *service = [[UserFinderService alloc] initWithUserFinderLocationsDataSource:dataSource];
 	
+	
 	XCTAssertFalse(service.isRefreshing, @"UserFinderService thinks it's refreshing before refresh has been called.");
 	
-	NSLog(@"1");
 	
-	__block BOOL waitingForBlock = YES;
-	
-	NSLog(@"2");
+	__block BOOL waitingForCompletion = YES;
 	
 	[service refreshWithCompletion:^(BOOL success) {
 		
-		NSLog(@"3");
-		
-		 waitingForBlock = NO;
+		 waitingForCompletion = NO;
 		
 		XCTAssertTrue(success, @"UserFinderService fails to refresh successfully with sample data.");
 		XCTAssertFalse(service.isRefreshing, @"UserFinderService still thinks it's refreshing after calling completion block.");
 
 		XCTAssertNotNil(service.userLocations,@"UserFinderService has no locations after refresh with sample data.");
-		
-		
-			NSLog(@"4");
-		
 	}];
-	
-	
-		NSLog(@"5");
 	
 		XCTAssertTrue(service.isRefreshing, @"UserFinderService does not correctly set isRefreshing after calling refresh.");
 	
 	
-	while(waitingForBlock) {
+	//Pause test till completion block executed.
+	while(waitingForCompletion) {
 		[[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode
 														 beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
 	}
-
 	
 }
 
