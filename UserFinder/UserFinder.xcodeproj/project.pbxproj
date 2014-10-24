@@ -11,7 +11,6 @@
 		F270131919F9160000ABA859 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F270131819F9160000ABA859 /* AppDelegate.m */; };
 		F270132119F9160000ABA859 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F270132019F9160000ABA859 /* Images.xcassets */; };
 		F270132419F9160000ABA859 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F270132219F9160000ABA859 /* LaunchScreen.xib */; };
-		F270133019F9160000ABA859 /* UserFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F270132F19F9160000ABA859 /* UserFinderTests.m */; };
 		F270133B19F9172B00ABA859 /* UserFinderService.m in Sources */ = {isa = PBXBuildFile; fileRef = F270133A19F9172B00ABA859 /* UserFinderService.m */; };
 		F270133D19F9174E00ABA859 /* sample_locations.xml in Resources */ = {isa = PBXBuildFile; fileRef = F270133C19F9174E00ABA859 /* sample_locations.xml */; };
 		F270134119F918CE00ABA859 /* UserFinderSampleLocationsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F270134019F918CE00ABA859 /* UserFinderSampleLocationsDataSource.m */; };
@@ -53,7 +52,6 @@
 		F270132319F9160000ABA859 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F270132919F9160000ABA859 /* UserFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F270132E19F9160000ABA859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F270132F19F9160000ABA859 /* UserFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserFinderTests.m; sourceTree = "<group>"; };
 		F270133919F9172B00ABA859 /* UserFinderService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserFinderService.h; sourceTree = "<group>"; };
 		F270133A19F9172B00ABA859 /* UserFinderService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserFinderService.m; sourceTree = "<group>"; };
 		F270133C19F9174E00ABA859 /* sample_locations.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample_locations.xml; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 		F270132C19F9160000ABA859 /* UserFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				F270132F19F9160000ABA859 /* UserFinderTests.m */,
 				F2B1231819FA8C1A00493D1F /* ServiceTests.m */,
 				F270132D19F9160000ABA859 /* Supporting Files */,
 			);
@@ -494,7 +491,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F270133019F9160000ABA859 /* UserFinderTests.m in Sources */,
 				F2B1231919FA8C1A00493D1F /* ServiceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,6 +45,7 @@ static int kUserLocationsKVOContext;
 	[self startKVO];
 	
 	if (!self.hasAppearedBefore) {
+		self.hasAppearedBefore = YES;
 		[self refreshMap];
 	}
 	
